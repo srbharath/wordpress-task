@@ -2,9 +2,8 @@
 
 #  steps 
 
-Clone this repository( git must be installed in your system )
-
-git clone
+Clone this repository( git must be installed in your system ) 
+git clone https://github.com/srbharath/wordpress-task.git
 
 #  move to the directory
 cd wordpress-task
