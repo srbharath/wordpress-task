@@ -5,7 +5,7 @@
 Clone this repository( git must be installed in your system ) 
 git clone https://github.com/srbharath/wordpress-task.git
 
-#  move to the directory
+#       move to the directory
 cd wordpress-task
 
 #  Provide execution permission to this file
