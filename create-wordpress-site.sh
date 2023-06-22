@@ -7,8 +7,20 @@ command_exists() {
 
 # Check if docker and docker-compose are installed
 if ! command_exists docker || ! command_exists docker-compose; then
-  echo "Docker or Docker Compose is not installed. Please install them and try again."
-  exit 1
+  echo "Docker or Docker Compose is not installed. Installing..."
+
+  # Install Docker
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
+
+  # Install Docker Compose
+  sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+
+  # Cleanup
+  rm get-docker.sh
+
+  echo "Docker and Docker Compose installed successfully."
 fi
 
 # Check if a site name is provided as a command-line argument
